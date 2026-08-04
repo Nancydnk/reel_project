@@ -1,0 +1,22 @@
+[
+  {
+    "slide_num": 1,
+    "description": "Title Slide: Multimodal Fine Dining Consumer Insight Observer",
+    "narration": "Traditional restaurant feedback relies on manual reviews, leaving fine dining operators without real-time insights."
+  },
+  {
+    "slide_num": 2,
+    "description": "Problem & Target Audience: Bangkok Fine Dining Market",
+    "narration": "Bangkok fine dining restaurant owners face high acquisition costs and need deeper emotional sentiment analysis."
+  },
+  {
+    "slide_num": 3,
+    "description": "Proposed Solution: Real-Time Webcam Emotion & Chat Analysis",
+    "narration": "Our AI Agent combines video metadata, webcam facial tracking, and qualitative chat interviews into one dashboard."
+  },
+  {
+    "slide_num": 4,
+    "description": "Expected Outcomes: Executive Decision Reports",
+    "narration": "It delivers actionable sentiment breakdowns across food, service, ambience, and pricing to boost customer retention."
+  }
+]

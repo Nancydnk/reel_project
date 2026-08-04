@@ -1,0 +1,5 @@
+pydantic-ai
+openai
+jinja2
+pillow
+python-dotenv

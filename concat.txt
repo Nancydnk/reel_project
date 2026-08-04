@@ -1,0 +1,4 @@
+file 'slides/audio_1.mp3'
+file 'slides/audio_2.mp3'
+file 'slides/audio_3.mp3'
+file 'slides/audio_4.mp3'

@@ -1,0 +1,6 @@
+.env
+*.env
+.env.txt
+key.txt
+__pycache__/
+*.mp4
