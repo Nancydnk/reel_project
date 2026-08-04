@@ -3,3 +3,6 @@ openai
 jinja2
 pillow
 python-dotenv
+moviepy
+gTTS
+httpx
