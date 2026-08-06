@@ -1,9 +1,73 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><style>
-body { margin: 0; background: linear-gradient(135deg, #1e1b4b, #0f172a); color: #fff; font-family: system-ui; display: flex; flex-direction: column; justify-content: center; height: 100vh; padding: 50px; box-sizing: border-box; }
-.title { font-size: 46px; font-weight: 900; text-align: center; margin-bottom: 45px; background: linear-gradient(to right, #f472b6, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-.metric-card { background: rgba(30, 41, 59, 0.9); border-radius: 28px; padding: 35px 20px; text-align: center; border: 3px solid #475569; }
-.icon { font-size: 55px; margin-bottom: 10px; }
-.label { font-size: 26px; color: #cbd5e1; font-weight: 700; }
-.val { font-size: 42px; font-weight: 900; color: #34d399; margin-top: 8px; }
-</style></head><body><div class="title">🎉 Expected Outcomes</div><div class="grid"><div class="metric-card"><div class="icon">🍽️</div><div class="label">Food</div><div class="val">+24%</div></div><div class="metric-card"><div class="icon">🍷</div><div class="label">Ambience</div><div class="val">+35%</div></div><div class="metric-card"><div class="icon">🤝</div><div class="label">Service</div><div class="val">+40%</div></div><div class="metric-card"><div class="icon">📈</div><div class="label">Retention</div><div class="val">BOOST</div></div></div></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a, #1c1917);
+            color: #ffffff;
+            font-family: system-ui, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .badge {
+            background: linear-gradient(90deg, #f97316, #ea580c);
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+        }
+        .brand {
+            font-size: 14px;
+            color: #38bdf8;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        h1 {
+            color: #fff;
+            font-size: 32px;
+            margin: 0 0 16px 0;
+            max-width: 600px;
+            line-height: 1.25;
+        }
+        p {
+            font-size: 20px;
+            color: #cbd5e1;
+            max-width: 520px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .svg-container {
+            margin-top: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="brand">MenuMatch AI</div>
+    <div class="badge">🍽️ PICKS</div>
+    <h1>Categorized Recommendations</h1>
+    <p>Get dishes sorted into Must Try, Safe Bet, Hidden Gem, and Skip It — personalized to your taste.</p>
+    <div class="svg-container"><svg width="140" height="140" viewBox="0 0 24 24" fill="none" stroke-width="0">
+        <rect x="2" y="3" width="9" height="5" rx="2" fill="#22c55e"/>
+        <rect x="13" y="3" width="9" height="5" rx="2" fill="#38bdf8"/>
+        <rect x="2" y="10" width="9" height="5" rx="2" fill="#a78bfa"/>
+        <rect x="13" y="10" width="9" height="5" rx="2" fill="#ef4444"/>
+        <text x="6.5" y="6.5" text-anchor="middle" fill="#fff" font-size="2.5" font-weight="bold">★</text>
+        <text x="17.5" y="6.5" text-anchor="middle" fill="#fff" font-size="2.5" font-weight="bold">✓</text>
+        <text x="6.5" y="13.5" text-anchor="middle" fill="#fff" font-size="2.5" font-weight="bold">◆</text>
+        <text x="17.5" y="13.5" text-anchor="middle" fill="#fff" font-size="2.5" font-weight="bold">✗</text>
+        <text x="6.5" y="20" text-anchor="middle" fill="#22c55e" font-size="2" font-family="sans-serif">Must Try</text>
+        <text x="17.5" y="20" text-anchor="middle" fill="#38bdf8" font-size="2" font-family="sans-serif">Safe Bet</text>
+    </svg></div>
+</body>
+</html>

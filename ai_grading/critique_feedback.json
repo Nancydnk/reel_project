@@ -1,7 +1,16 @@
 {
-  "overall_critique": "The slide structure aligns well with the project proposal. Visual layouts use pure HTML/SVG code without external image stock.",
+  "overall_critique": "The four-slide plan clearly maps each MenuMatch AI core feature to its own slide. Narration scripts are concise and stay within the 15-second target. Visual hierarchy should lead with the feature name, then a supporting icon.",
   "improvements": [
-    "Enhanced contrast for title fonts on dark background.",
-    "Refined narration scripts to stay strictly under 15 seconds per slide."
-  ]
+    "Slide 1: Add a camera/scan animation icon to reinforce the OCR capture action.",
+    "Slide 2: Show a map pin SVG anchored to a restaurant label for GPS clarity.",
+    "Slide 3: Use a sentiment bar chart (positive vs. negative) instead of a generic clock icon.",
+    "Slide 4: Display four color-coded recommendation badges (Must Try, Safe Bet, Hidden Gem, Skip It) for instant visual recognition.",
+    "Ensure all title fonts use high-contrast warm tones (#f97316 orange) on the dark gradient background for brand consistency."
+  ],
+  "slide_specific": {
+    "slide_1": "Strong hook \u2014 emphasize speed ('instantly extracts') in both narration and headline.",
+    "slide_2": "Clarify that GPS auto-matches without manual restaurant search \u2014 reduces user friction.",
+    "slide_3": "Mention data sources (Google, TripAdvisor) briefly to build trust in sentiment scores.",
+    "slide_4": "End with a clear call-to-action feel \u2014 this is the payoff slide diners care about most."
+  }
 }
