@@ -3,65 +3,132 @@
 <head>
     <meta charset="utf-8">
     <style>
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.6) translateY(40px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-18px) rotate(6deg); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.5), 0 0 40px rgba(123, 47, 247, 0.3); }
+            50% { box-shadow: 0 0 35px rgba(255, 107, 53, 0.9), 0 0 60px rgba(123, 47, 247, 0.6); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        * { box-sizing: border-box; }
         body {
-            background: linear-gradient(135deg, #0f172a, #1c1917);
-            color: #ffffff;
-            font-family: system-ui, Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: "Segoe UI", system-ui, sans-serif;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
-            padding: 40px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e, #7b2ff7, #06b6d4, #ff6b35);
+            background-size: 400% 400%;
+            animation: gradientShift 6s ease infinite;
+            color: #fff;
+        }
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            opacity: 0.35;
+            animation: float 4s ease-in-out infinite;
+        }
+        .orb.a { width: 180px; height: 180px; background: #fbbf24; top: 8%; left: 6%; animation-delay: 0s; }
+        .orb.b { width: 120px; height: 120px; background: #a855f7; top: 70%; right: 8%; animation-delay: 1s; }
+        .orb.c { width: 90px; height: 90px; background: #22d3ee; bottom: 15%; left: 12%; animation-delay: 2s; }
+        .card {
+            position: relative;
+            z-index: 2;
             text-align: center;
-            box-sizing: border-box;
+            padding: 56px 48px;
+            max-width: 920px;
+            background: rgba(15, 10, 40, 0.55);
+            border: 3px solid rgba(255, 255, 255, 0.25);
+            border-radius: 40px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        }
+        .emoji-deco {
+            position: absolute;
+            font-size: 42px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .emoji-deco.e1 { top: -20px; left: 30px; animation-delay: 0.2s; }
+        .emoji-deco.e2 { top: 20px; right: 24px; animation-delay: 0.8s; }
+        .brand {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #22d3ee, #a855f7, #fb923c);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite, popIn 0.8s ease-out both;
         }
         .badge {
-            background: linear-gradient(90deg, #f97316, #ea580c);
-            padding: 10px 28px;
-            border-radius: 30px;
-            font-weight: 800;
-            font-size: 16px;
-            margin-bottom: 24px;
-            letter-spacing: 0.05em;
-        }
-        .brand {
-            font-size: 14px;
-            color: #38bdf8;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-bottom: 8px;
+            display: inline-block;
+            margin: 20px 0 28px;
+            padding: 14px 32px;
+            border-radius: 999px;
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            background: linear-gradient(90deg, #ff6b35, #f97316, #ea580c);
+            animation: popIn 0.9s ease-out 0.2s both, pulseGlow 2.5s ease-in-out 1s infinite;
         }
         h1 {
-            color: #fff;
-            font-size: 32px;
-            margin: 0 0 16px 0;
-            max-width: 600px;
-            line-height: 1.25;
+            margin: 0 0 20px;
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1.15;
+            text-shadow: 0 4px 24px rgba(123, 47, 247, 0.5);
+            animation: popIn 1s ease-out 0.4s both;
         }
         p {
-            font-size: 20px;
-            color: #cbd5e1;
-            max-width: 520px;
-            line-height: 1.5;
             margin: 0;
+            font-size: 26px;
+            line-height: 1.5;
+            color: #fef3c7;
+            font-weight: 600;
+            animation: popIn 1s ease-out 0.6s both;
         }
         .svg-container {
-            margin-top: 28px;
+            margin-top: 36px;
+            animation: popIn 1.1s ease-out 0.8s both;
+            filter: drop-shadow(0 0 18px rgba(249, 115, 22, 0.8));
         }
     </style>
 </head>
 <body>
-    <div class="brand">MenuMatch AI</div>
-    <div class="badge">📸 OCR SCAN</div>
-    <h1>MenuMatch AI — OCR Menu Scan</h1>
-    <p>Snap any restaurant menu and MenuMatch AI instantly extracts every dish, price, and description using smart OCR.</p>
-    <div class="svg-container"><svg width="140" height="140" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5">
-        <rect x="3" y="5" width="18" height="14" rx="2"/>
-        <path d="M7 9h10M7 13h6"/>
-        <circle cx="17" cy="8" r="3" fill="#f97316" stroke="none"/>
-        <path d="M16 8h2M17 7v2" stroke="#fff" stroke-width="1"/>
-    </svg></div>
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <div class="orb c"></div>
+    <div class="card">
+        <span class="emoji-deco e1">📸</span>
+        <span class="emoji-deco e2">✨</span>
+        <div class="brand">MenuMatch AI</div>
+        <div class="badge">📸 OCR SCAN</div>
+        <h1>MenuMatch AI — OCR Menu Scan</h1>
+        <p>Snap any restaurant menu and MenuMatch AI instantly extracts every dish, price, and description using smart OCR.</p>
+        <div class="svg-container"><svg width="160" height="160" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="M7 9h10M7 13h6"/>
+            <circle cx="17" cy="8" r="3" fill="#f97316" stroke="none"/>
+            <path d="M16 8h2M17 7v2" stroke="#fff" stroke-width="1"/>
+        </svg></div>
+    </div>
 </body>
 </html>
